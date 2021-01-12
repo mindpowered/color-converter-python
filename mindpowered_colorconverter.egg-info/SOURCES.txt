@@ -1,0 +1,9 @@
+README.md
+colorconverter.py
+mindpowered_colorconverter.egg-info/PKG-INFO
+mindpowered_colorconverter.egg-info/SOURCES.txt
+mindpowered_colorconverter.egg-info/dependency_links.txt
+mindpowered_colorconverter.egg-info/requires.txt
+mindpowered_colorconverter.egg-info/top_level.txt
+wrappers/ColorConverter.py
+wrappers/__init__.py
