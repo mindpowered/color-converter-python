@@ -1782,14 +1782,34 @@ class colorconverter_ColorConverter:
         def _hx_local_3(args):
             data = maglev_MagLevArray.create()
             data.push(maglev_MagLevString.fromString("_not_implemented_"))
+            data.push(maglev_MagLevString.fromString("ColorConverter.FromHEX"))
+            data.push(maglev_MagLevString.fromString("colorconverter"))
+            bus.call("MindPowered.Telemetry.Send",data)
+            err = maglev_MagLevError.create(-20000,"You are trying to use the 'ColorConverter.FromHEX' method but it's not quite done yet. Please email support@mindpowered.dev to find out when it will be done.",data)
+            result = maglev_MagLevResult.fromError(err)
+            return result
+        self.maglev.register("ColorConverter.FromHEX",maglev_MagLevFunction.fromFunction(_hx_local_3))
+        def _hx_local_4(args):
+            data = maglev_MagLevArray.create()
+            data.push(maglev_MagLevString.fromString("_not_implemented_"))
+            data.push(maglev_MagLevString.fromString("ColorConverter.FromXYZ"))
+            data.push(maglev_MagLevString.fromString("colorconverter"))
+            bus.call("MindPowered.Telemetry.Send",data)
+            err = maglev_MagLevError.create(-20000,"You are trying to use the 'ColorConverter.FromXYZ' method but it's not quite done yet. Please email support@mindpowered.dev to find out when it will be done.",data)
+            result = maglev_MagLevResult.fromError(err)
+            return result
+        self.maglev.register("ColorConverter.FromXYZ",maglev_MagLevFunction.fromFunction(_hx_local_4))
+        def _hx_local_5(args):
+            data = maglev_MagLevArray.create()
+            data.push(maglev_MagLevString.fromString("_not_implemented_"))
             data.push(maglev_MagLevString.fromString("ColorConverter.ConvertRGB"))
             data.push(maglev_MagLevString.fromString("colorconverter"))
             bus.call("MindPowered.Telemetry.Send",data)
             err = maglev_MagLevError.create(-20000,"You are trying to use the 'ColorConverter.ConvertRGB' method but it's not quite done yet. Please email support@mindpowered.dev to find out when it will be done.",data)
             result = maglev_MagLevResult.fromError(err)
             return result
-        self.maglev.register("ColorConverter.ConvertRGB",maglev_MagLevFunction.fromFunction(_hx_local_3))
-        def _hx_local_4(args):
+        self.maglev.register("ColorConverter.ConvertRGB",maglev_MagLevFunction.fromFunction(_hx_local_5))
+        def _hx_local_6(args):
             data = maglev_MagLevArray.create()
             data.push(maglev_MagLevString.fromString("_not_implemented_"))
             data.push(maglev_MagLevString.fromString("ColorConverter.ConvertCIELAB"))
@@ -1798,8 +1818,8 @@ class colorconverter_ColorConverter:
             err = maglev_MagLevError.create(-20000,"You are trying to use the 'ColorConverter.ConvertCIELAB' method but it's not quite done yet. Please email support@mindpowered.dev to find out when it will be done.",data)
             result = maglev_MagLevResult.fromError(err)
             return result
-        self.maglev.register("ColorConverter.ConvertCIELAB",maglev_MagLevFunction.fromFunction(_hx_local_4))
-        def _hx_local_5(args):
+        self.maglev.register("ColorConverter.ConvertCIELAB",maglev_MagLevFunction.fromFunction(_hx_local_6))
+        def _hx_local_7(args):
             data = maglev_MagLevArray.create()
             data.push(maglev_MagLevString.fromString("_not_implemented_"))
             data.push(maglev_MagLevString.fromString("ColorConverter.ConvertCMYK"))
@@ -1808,8 +1828,28 @@ class colorconverter_ColorConverter:
             err = maglev_MagLevError.create(-20000,"You are trying to use the 'ColorConverter.ConvertCMYK' method but it's not quite done yet. Please email support@mindpowered.dev to find out when it will be done.",data)
             result = maglev_MagLevResult.fromError(err)
             return result
-        self.maglev.register("ColorConverter.ConvertCMYK",maglev_MagLevFunction.fromFunction(_hx_local_5))
-        def _hx_local_6(args):
+        self.maglev.register("ColorConverter.ConvertCMYK",maglev_MagLevFunction.fromFunction(_hx_local_7))
+        def _hx_local_8(args):
+            data = maglev_MagLevArray.create()
+            data.push(maglev_MagLevString.fromString("_not_implemented_"))
+            data.push(maglev_MagLevString.fromString("ColorConverter.ConvertHEX"))
+            data.push(maglev_MagLevString.fromString("colorconverter"))
+            bus.call("MindPowered.Telemetry.Send",data)
+            err = maglev_MagLevError.create(-20000,"You are trying to use the 'ColorConverter.ConvertHEX' method but it's not quite done yet. Please email support@mindpowered.dev to find out when it will be done.",data)
+            result = maglev_MagLevResult.fromError(err)
+            return result
+        self.maglev.register("ColorConverter.ConvertHEX",maglev_MagLevFunction.fromFunction(_hx_local_8))
+        def _hx_local_9(args):
+            data = maglev_MagLevArray.create()
+            data.push(maglev_MagLevString.fromString("_not_implemented_"))
+            data.push(maglev_MagLevString.fromString("ColorConverter.ConvertXYZ"))
+            data.push(maglev_MagLevString.fromString("colorconverter"))
+            bus.call("MindPowered.Telemetry.Send",data)
+            err = maglev_MagLevError.create(-20000,"You are trying to use the 'ColorConverter.ConvertXYZ' method but it's not quite done yet. Please email support@mindpowered.dev to find out when it will be done.",data)
+            result = maglev_MagLevResult.fromError(err)
+            return result
+        self.maglev.register("ColorConverter.ConvertXYZ",maglev_MagLevFunction.fromFunction(_hx_local_9))
+        def _hx_local_10(args):
             data = maglev_MagLevArray.create()
             data.push(maglev_MagLevString.fromString("_not_implemented_"))
             data.push(maglev_MagLevString.fromString("ColorConverter.AddReferenceColorByRGB"))
@@ -1818,8 +1858,8 @@ class colorconverter_ColorConverter:
             err = maglev_MagLevError.create(-20000,"You are trying to use the 'ColorConverter.AddReferenceColorByRGB' method but it's not quite done yet. Please email support@mindpowered.dev to find out when it will be done.",data)
             result = maglev_MagLevResult.fromError(err)
             return result
-        self.maglev.register("ColorConverter.AddReferenceColorByRGB",maglev_MagLevFunction.fromFunction(_hx_local_6))
-        def _hx_local_7(args):
+        self.maglev.register("ColorConverter.AddReferenceColorByRGB",maglev_MagLevFunction.fromFunction(_hx_local_10))
+        def _hx_local_11(args):
             data = maglev_MagLevArray.create()
             data.push(maglev_MagLevString.fromString("_not_implemented_"))
             data.push(maglev_MagLevString.fromString("ColorConverter.AddReferenceColorByCIELAB"))
@@ -1828,8 +1868,8 @@ class colorconverter_ColorConverter:
             err = maglev_MagLevError.create(-20000,"You are trying to use the 'ColorConverter.AddReferenceColorByCIELAB' method but it's not quite done yet. Please email support@mindpowered.dev to find out when it will be done.",data)
             result = maglev_MagLevResult.fromError(err)
             return result
-        self.maglev.register("ColorConverter.AddReferenceColorByCIELAB",maglev_MagLevFunction.fromFunction(_hx_local_7))
-        def _hx_local_8(args):
+        self.maglev.register("ColorConverter.AddReferenceColorByCIELAB",maglev_MagLevFunction.fromFunction(_hx_local_11))
+        def _hx_local_12(args):
             data = maglev_MagLevArray.create()
             data.push(maglev_MagLevString.fromString("_not_implemented_"))
             data.push(maglev_MagLevString.fromString("ColorConverter.AddReferenceColorByCMYK"))
@@ -1838,8 +1878,28 @@ class colorconverter_ColorConverter:
             err = maglev_MagLevError.create(-20000,"You are trying to use the 'ColorConverter.AddReferenceColorByCMYK' method but it's not quite done yet. Please email support@mindpowered.dev to find out when it will be done.",data)
             result = maglev_MagLevResult.fromError(err)
             return result
-        self.maglev.register("ColorConverter.AddReferenceColorByCMYK",maglev_MagLevFunction.fromFunction(_hx_local_8))
-        def _hx_local_9(args):
+        self.maglev.register("ColorConverter.AddReferenceColorByCMYK",maglev_MagLevFunction.fromFunction(_hx_local_12))
+        def _hx_local_13(args):
+            data = maglev_MagLevArray.create()
+            data.push(maglev_MagLevString.fromString("_not_implemented_"))
+            data.push(maglev_MagLevString.fromString("ColorConverter.AddReferenceColorByHEX"))
+            data.push(maglev_MagLevString.fromString("colorconverter"))
+            bus.call("MindPowered.Telemetry.Send",data)
+            err = maglev_MagLevError.create(-20000,"You are trying to use the 'ColorConverter.AddReferenceColorByHEX' method but it's not quite done yet. Please email support@mindpowered.dev to find out when it will be done.",data)
+            result = maglev_MagLevResult.fromError(err)
+            return result
+        self.maglev.register("ColorConverter.AddReferenceColorByHEX",maglev_MagLevFunction.fromFunction(_hx_local_13))
+        def _hx_local_14(args):
+            data = maglev_MagLevArray.create()
+            data.push(maglev_MagLevString.fromString("_not_implemented_"))
+            data.push(maglev_MagLevString.fromString("ColorConverter.AddReferenceColorByXYZ"))
+            data.push(maglev_MagLevString.fromString("colorconverter"))
+            bus.call("MindPowered.Telemetry.Send",data)
+            err = maglev_MagLevError.create(-20000,"You are trying to use the 'ColorConverter.AddReferenceColorByXYZ' method but it's not quite done yet. Please email support@mindpowered.dev to find out when it will be done.",data)
+            result = maglev_MagLevResult.fromError(err)
+            return result
+        self.maglev.register("ColorConverter.AddReferenceColorByXYZ",maglev_MagLevFunction.fromFunction(_hx_local_14))
+        def _hx_local_15(args):
             data = maglev_MagLevArray.create()
             data.push(maglev_MagLevString.fromString("_not_implemented_"))
             data.push(maglev_MagLevString.fromString("ColorConverter.FindReferenceColorByRGB"))
@@ -1848,8 +1908,8 @@ class colorconverter_ColorConverter:
             err = maglev_MagLevError.create(-20000,"You are trying to use the 'ColorConverter.FindReferenceColorByRGB' method but it's not quite done yet. Please email support@mindpowered.dev to find out when it will be done.",data)
             result = maglev_MagLevResult.fromError(err)
             return result
-        self.maglev.register("ColorConverter.FindReferenceColorByRGB",maglev_MagLevFunction.fromFunction(_hx_local_9))
-        def _hx_local_10(args):
+        self.maglev.register("ColorConverter.FindReferenceColorByRGB",maglev_MagLevFunction.fromFunction(_hx_local_15))
+        def _hx_local_16(args):
             data = maglev_MagLevArray.create()
             data.push(maglev_MagLevString.fromString("_not_implemented_"))
             data.push(maglev_MagLevString.fromString("ColorConverter.FindReferenceColorByCIELAB"))
@@ -1858,8 +1918,8 @@ class colorconverter_ColorConverter:
             err = maglev_MagLevError.create(-20000,"You are trying to use the 'ColorConverter.FindReferenceColorByCIELAB' method but it's not quite done yet. Please email support@mindpowered.dev to find out when it will be done.",data)
             result = maglev_MagLevResult.fromError(err)
             return result
-        self.maglev.register("ColorConverter.FindReferenceColorByCIELAB",maglev_MagLevFunction.fromFunction(_hx_local_10))
-        def _hx_local_11(args):
+        self.maglev.register("ColorConverter.FindReferenceColorByCIELAB",maglev_MagLevFunction.fromFunction(_hx_local_16))
+        def _hx_local_17(args):
             data = maglev_MagLevArray.create()
             data.push(maglev_MagLevString.fromString("_not_implemented_"))
             data.push(maglev_MagLevString.fromString("ColorConverter.FindReferenceColorByCMYK"))
@@ -1868,8 +1928,28 @@ class colorconverter_ColorConverter:
             err = maglev_MagLevError.create(-20000,"You are trying to use the 'ColorConverter.FindReferenceColorByCMYK' method but it's not quite done yet. Please email support@mindpowered.dev to find out when it will be done.",data)
             result = maglev_MagLevResult.fromError(err)
             return result
-        self.maglev.register("ColorConverter.FindReferenceColorByCMYK",maglev_MagLevFunction.fromFunction(_hx_local_11))
-        def _hx_local_12(args):
+        self.maglev.register("ColorConverter.FindReferenceColorByCMYK",maglev_MagLevFunction.fromFunction(_hx_local_17))
+        def _hx_local_18(args):
+            data = maglev_MagLevArray.create()
+            data.push(maglev_MagLevString.fromString("_not_implemented_"))
+            data.push(maglev_MagLevString.fromString("ColorConverter.FindReferenceColorByHEX"))
+            data.push(maglev_MagLevString.fromString("colorconverter"))
+            bus.call("MindPowered.Telemetry.Send",data)
+            err = maglev_MagLevError.create(-20000,"You are trying to use the 'ColorConverter.FindReferenceColorByHEX' method but it's not quite done yet. Please email support@mindpowered.dev to find out when it will be done.",data)
+            result = maglev_MagLevResult.fromError(err)
+            return result
+        self.maglev.register("ColorConverter.FindReferenceColorByHEX",maglev_MagLevFunction.fromFunction(_hx_local_18))
+        def _hx_local_19(args):
+            data = maglev_MagLevArray.create()
+            data.push(maglev_MagLevString.fromString("_not_implemented_"))
+            data.push(maglev_MagLevString.fromString("ColorConverter.FindReferenceColorByXYZ"))
+            data.push(maglev_MagLevString.fromString("colorconverter"))
+            bus.call("MindPowered.Telemetry.Send",data)
+            err = maglev_MagLevError.create(-20000,"You are trying to use the 'ColorConverter.FindReferenceColorByXYZ' method but it's not quite done yet. Please email support@mindpowered.dev to find out when it will be done.",data)
+            result = maglev_MagLevResult.fromError(err)
+            return result
+        self.maglev.register("ColorConverter.FindReferenceColorByXYZ",maglev_MagLevFunction.fromFunction(_hx_local_19))
+        def _hx_local_20(args):
             data = maglev_MagLevArray.create()
             data.push(maglev_MagLevString.fromString("_not_implemented_"))
             data.push(maglev_MagLevString.fromString("ColorConverter.FindReferenceColor"))
@@ -1878,8 +1958,8 @@ class colorconverter_ColorConverter:
             err = maglev_MagLevError.create(-20000,"You are trying to use the 'ColorConverter.FindReferenceColor' method but it's not quite done yet. Please email support@mindpowered.dev to find out when it will be done.",data)
             result = maglev_MagLevResult.fromError(err)
             return result
-        self.maglev.register("ColorConverter.FindReferenceColor",maglev_MagLevFunction.fromFunction(_hx_local_12))
-        def _hx_local_13(args):
+        self.maglev.register("ColorConverter.FindReferenceColor",maglev_MagLevFunction.fromFunction(_hx_local_20))
+        def _hx_local_21(args):
             data = maglev_MagLevArray.create()
             data.push(maglev_MagLevString.fromString("_not_implemented_"))
             data.push(maglev_MagLevString.fromString("ColorConverter.RemoveReferenceColorSystem"))
@@ -1888,8 +1968,8 @@ class colorconverter_ColorConverter:
             err = maglev_MagLevError.create(-20000,"You are trying to use the 'ColorConverter.RemoveReferenceColorSystem' method but it's not quite done yet. Please email support@mindpowered.dev to find out when it will be done.",data)
             result = maglev_MagLevResult.fromError(err)
             return result
-        self.maglev.register("ColorConverter.RemoveReferenceColorSystem",maglev_MagLevFunction.fromFunction(_hx_local_13))
-        def _hx_local_14(args):
+        self.maglev.register("ColorConverter.RemoveReferenceColorSystem",maglev_MagLevFunction.fromFunction(_hx_local_21))
+        def _hx_local_22(args):
             data = maglev_MagLevArray.create()
             data.push(maglev_MagLevString.fromString("_not_implemented_"))
             data.push(maglev_MagLevString.fromString("ColorConverter.GetReferenceColorSystems"))
@@ -1898,8 +1978,8 @@ class colorconverter_ColorConverter:
             err = maglev_MagLevError.create(-20000,"You are trying to use the 'ColorConverter.GetReferenceColorSystems' method but it's not quite done yet. Please email support@mindpowered.dev to find out when it will be done.",data)
             result = maglev_MagLevResult.fromError(err)
             return result
-        self.maglev.register("ColorConverter.GetReferenceColorSystems",maglev_MagLevFunction.fromFunction(_hx_local_14))
-        def _hx_local_15(args):
+        self.maglev.register("ColorConverter.GetReferenceColorSystems",maglev_MagLevFunction.fromFunction(_hx_local_22))
+        def _hx_local_23(args):
             data = maglev_MagLevArray.create()
             data.push(maglev_MagLevString.fromString("_not_implemented_"))
             data.push(maglev_MagLevString.fromString("ColorConverter.GetReferenceColors"))
@@ -1908,8 +1988,8 @@ class colorconverter_ColorConverter:
             err = maglev_MagLevError.create(-20000,"You are trying to use the 'ColorConverter.GetReferenceColors' method but it's not quite done yet. Please email support@mindpowered.dev to find out when it will be done.",data)
             result = maglev_MagLevResult.fromError(err)
             return result
-        self.maglev.register("ColorConverter.GetReferenceColors",maglev_MagLevFunction.fromFunction(_hx_local_15))
-        def _hx_local_16(args):
+        self.maglev.register("ColorConverter.GetReferenceColors",maglev_MagLevFunction.fromFunction(_hx_local_23))
+        def _hx_local_24(args):
             data = maglev_MagLevArray.create()
             data.push(maglev_MagLevString.fromString("_not_implemented_"))
             data.push(maglev_MagLevString.fromString("ColorConverter.GetIlluminationObserverAngles"))
@@ -1918,8 +1998,8 @@ class colorconverter_ColorConverter:
             err = maglev_MagLevError.create(-20000,"You are trying to use the 'ColorConverter.GetIlluminationObserverAngles' method but it's not quite done yet. Please email support@mindpowered.dev to find out when it will be done.",data)
             result = maglev_MagLevResult.fromError(err)
             return result
-        self.maglev.register("ColorConverter.GetIlluminationObserverAngles",maglev_MagLevFunction.fromFunction(_hx_local_16))
-        def _hx_local_17(args):
+        self.maglev.register("ColorConverter.GetIlluminationObserverAngles",maglev_MagLevFunction.fromFunction(_hx_local_24))
+        def _hx_local_25(args):
             data = maglev_MagLevArray.create()
             data.push(maglev_MagLevString.fromString("_not_implemented_"))
             data.push(maglev_MagLevString.fromString("ColorConverter.SaveReferenceColors"))
@@ -1928,8 +2008,8 @@ class colorconverter_ColorConverter:
             err = maglev_MagLevError.create(-20000,"You are trying to use the 'ColorConverter.SaveReferenceColors' method but it's not quite done yet. Please email support@mindpowered.dev to find out when it will be done.",data)
             result = maglev_MagLevResult.fromError(err)
             return result
-        self.maglev.register("ColorConverter.SaveReferenceColors",maglev_MagLevFunction.fromFunction(_hx_local_17))
-        def _hx_local_18(args):
+        self.maglev.register("ColorConverter.SaveReferenceColors",maglev_MagLevFunction.fromFunction(_hx_local_25))
+        def _hx_local_26(args):
             data = maglev_MagLevArray.create()
             data.push(maglev_MagLevString.fromString("_not_implemented_"))
             data.push(maglev_MagLevString.fromString("ColorConverter.LoadReferenceColors"))
@@ -1938,7 +2018,7 @@ class colorconverter_ColorConverter:
             err = maglev_MagLevError.create(-20000,"You are trying to use the 'ColorConverter.LoadReferenceColors' method but it's not quite done yet. Please email support@mindpowered.dev to find out when it will be done.",data)
             result = maglev_MagLevResult.fromError(err)
             return result
-        self.maglev.register("ColorConverter.LoadReferenceColors",maglev_MagLevFunction.fromFunction(_hx_local_18))
+        self.maglev.register("ColorConverter.LoadReferenceColors",maglev_MagLevFunction.fromFunction(_hx_local_26))
 
     @staticmethod
     def _hx_empty_init(_hx_o):

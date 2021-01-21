@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-<meta name="generator" content="pdoc 0.9.1" />
+<meta name="generator" content="pdoc 0.9.2" />
 <title>wrappers.ColorConverter API documentation</title>
 <meta name="description" content="" />
 <link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
@@ -94,6 +94,40 @@ class ColorConverter:
                 pybus.call(&#39;ColorConverter.FromCMYK&#39;, args, FromCMYK_Ret)
                 return ret
 
+        def FromHEX(self, hex: str) -&gt; List[Any]:
+                &#34;&#34;&#34;             Convert from HEX
+                Args:
+                        hex (str):
+                Returns:
+                        
+                &#34;&#34;&#34;
+                pybus = maglev.maglev_MagLevPy.getInstance(&#34;default&#34;)
+                args = [hex]
+                ret = None
+                def FromHEX_Ret(async_ret):
+                        nonlocal ret
+                        ret = async_ret
+                pybus.call(&#39;ColorConverter.FromHEX&#39;, args, FromHEX_Ret)
+                return ret
+
+        def FromXYZ(self, x: float, y: float, z: float) -&gt; List[Any]:
+                &#34;&#34;&#34;             Convert from XYZ
+                Args:
+                        x (float):
+                        y (float):
+                        z (float):
+                Returns:
+                        
+                &#34;&#34;&#34;
+                pybus = maglev.maglev_MagLevPy.getInstance(&#34;default&#34;)
+                args = [x, y, z]
+                ret = None
+                def FromXYZ_Ret(async_ret):
+                        nonlocal ret
+                        ret = async_ret
+                pybus.call(&#39;ColorConverter.FromXYZ&#39;, args, FromXYZ_Ret)
+                return ret
+
         def ConvertRGB(self, r: float, g: float, b: float, observer1: str, observer2: str) -&gt; List[Any]:
                 &#34;&#34;&#34;             Convert from RGB using illumination and observer angles
                 Args:
@@ -155,6 +189,44 @@ class ColorConverter:
                 pybus.call(&#39;ColorConverter.ConvertCMYK&#39;, args, ConvertCMYK_Ret)
                 return ret
 
+        def ConvertHEX(self, hex: str, observer1: str, observer2: str) -&gt; List[Any]:
+                &#34;&#34;&#34;             Convert from HEX using illumination and observer angles
+                Args:
+                        hex (str):
+                        observer1 (str):
+                        observer2 (str):
+                Returns:
+                        
+                &#34;&#34;&#34;
+                pybus = maglev.maglev_MagLevPy.getInstance(&#34;default&#34;)
+                args = [hex, observer1, observer2]
+                ret = None
+                def ConvertHEX_Ret(async_ret):
+                        nonlocal ret
+                        ret = async_ret
+                pybus.call(&#39;ColorConverter.ConvertHEX&#39;, args, ConvertHEX_Ret)
+                return ret
+
+        def ConvertXYZ(self, x: float, y: float, z: float, observer1: str, observer2: str) -&gt; List[Any]:
+                &#34;&#34;&#34;             Convert from XYZ using illumination and observer angles
+                Args:
+                        x (float):
+                        y (float):
+                        z (float):
+                        observer1 (str):
+                        observer2 (str):
+                Returns:
+                        
+                &#34;&#34;&#34;
+                pybus = maglev.maglev_MagLevPy.getInstance(&#34;default&#34;)
+                args = [x, y, z, observer1, observer2]
+                ret = None
+                def ConvertXYZ_Ret(async_ret):
+                        nonlocal ret
+                        ret = async_ret
+                pybus.call(&#39;ColorConverter.ConvertXYZ&#39;, args, ConvertXYZ_Ret)
+                return ret
+
         def AddReferenceColorByRGB(self, system: str, name: str, description: str, r: float, g: float, b: float):
                 &#34;&#34;&#34;             Add a reference color
                 Args:
@@ -210,6 +282,40 @@ class ColorConverter:
                         ret = async_ret
                 pybus.call(&#39;ColorConverter.AddReferenceColorByCMYK&#39;, args, AddReferenceColorByCMYK_Ret)
 
+        def AddReferenceColorByHEX(self, system: str, name: str, description: str, hex: str):
+                &#34;&#34;&#34;             Add a reference color
+                Args:
+                        system (str):
+                        name (str):
+                        description (str):
+                        hex (str):
+                &#34;&#34;&#34;
+                pybus = maglev.maglev_MagLevPy.getInstance(&#34;default&#34;)
+                args = [system, name, description, hex]
+                ret = None
+                def AddReferenceColorByHEX_Ret(async_ret):
+                        nonlocal ret
+                        ret = async_ret
+                pybus.call(&#39;ColorConverter.AddReferenceColorByHEX&#39;, args, AddReferenceColorByHEX_Ret)
+
+        def AddReferenceColorByXYZ(self, system: str, name: str, description: str, x: float, y: float, z: float):
+                &#34;&#34;&#34;             Add a reference color
+                Args:
+                        system (str):
+                        name (str):
+                        description (str):
+                        x (float):
+                        y (float):
+                        z (float):
+                &#34;&#34;&#34;
+                pybus = maglev.maglev_MagLevPy.getInstance(&#34;default&#34;)
+                args = [system, name, description, x, y, z]
+                ret = None
+                def AddReferenceColorByXYZ_Ret(async_ret):
+                        nonlocal ret
+                        ret = async_ret
+                pybus.call(&#39;ColorConverter.AddReferenceColorByXYZ&#39;, args, AddReferenceColorByXYZ_Ret)
+
         def FindReferenceColorByRGB(self, r: float, g: float, b: float) -&gt; List[Any]:
                 &#34;&#34;&#34;             
                 Args:
@@ -263,6 +369,40 @@ class ColorConverter:
                         nonlocal ret
                         ret = async_ret
                 pybus.call(&#39;ColorConverter.FindReferenceColorByCMYK&#39;, args, FindReferenceColorByCMYK_Ret)
+                return ret
+
+        def FindReferenceColorByHEX(self, hex: str) -&gt; List[Any]:
+                &#34;&#34;&#34;             
+                Args:
+                        hex (str):
+                Returns:
+                        
+                &#34;&#34;&#34;
+                pybus = maglev.maglev_MagLevPy.getInstance(&#34;default&#34;)
+                args = [hex]
+                ret = None
+                def FindReferenceColorByHEX_Ret(async_ret):
+                        nonlocal ret
+                        ret = async_ret
+                pybus.call(&#39;ColorConverter.FindReferenceColorByHEX&#39;, args, FindReferenceColorByHEX_Ret)
+                return ret
+
+        def FindReferenceColorByXYZ(self, x: float, y: float, z: float) -&gt; List[Any]:
+                &#34;&#34;&#34;             
+                Args:
+                        x (float):
+                        y (float):
+                        z (float):
+                Returns:
+                        
+                &#34;&#34;&#34;
+                pybus = maglev.maglev_MagLevPy.getInstance(&#34;default&#34;)
+                args = [x, y, z]
+                ret = None
+                def FindReferenceColorByXYZ_Ret(async_ret):
+                        nonlocal ret
+                        ret = async_ret
+                pybus.call(&#39;ColorConverter.FindReferenceColorByXYZ&#39;, args, FindReferenceColorByXYZ_Ret)
                 return ret
 
         def FindReferenceColor(self, system: str, name: str) -&gt; List[Any]:
@@ -447,6 +587,40 @@ class ColorConverter:
                 pybus.call(&#39;ColorConverter.FromCMYK&#39;, args, FromCMYK_Ret)
                 return ret
 
+        def FromHEX(self, hex: str) -&gt; List[Any]:
+                &#34;&#34;&#34;             Convert from HEX
+                Args:
+                        hex (str):
+                Returns:
+                        
+                &#34;&#34;&#34;
+                pybus = maglev.maglev_MagLevPy.getInstance(&#34;default&#34;)
+                args = [hex]
+                ret = None
+                def FromHEX_Ret(async_ret):
+                        nonlocal ret
+                        ret = async_ret
+                pybus.call(&#39;ColorConverter.FromHEX&#39;, args, FromHEX_Ret)
+                return ret
+
+        def FromXYZ(self, x: float, y: float, z: float) -&gt; List[Any]:
+                &#34;&#34;&#34;             Convert from XYZ
+                Args:
+                        x (float):
+                        y (float):
+                        z (float):
+                Returns:
+                        
+                &#34;&#34;&#34;
+                pybus = maglev.maglev_MagLevPy.getInstance(&#34;default&#34;)
+                args = [x, y, z]
+                ret = None
+                def FromXYZ_Ret(async_ret):
+                        nonlocal ret
+                        ret = async_ret
+                pybus.call(&#39;ColorConverter.FromXYZ&#39;, args, FromXYZ_Ret)
+                return ret
+
         def ConvertRGB(self, r: float, g: float, b: float, observer1: str, observer2: str) -&gt; List[Any]:
                 &#34;&#34;&#34;             Convert from RGB using illumination and observer angles
                 Args:
@@ -508,6 +682,44 @@ class ColorConverter:
                 pybus.call(&#39;ColorConverter.ConvertCMYK&#39;, args, ConvertCMYK_Ret)
                 return ret
 
+        def ConvertHEX(self, hex: str, observer1: str, observer2: str) -&gt; List[Any]:
+                &#34;&#34;&#34;             Convert from HEX using illumination and observer angles
+                Args:
+                        hex (str):
+                        observer1 (str):
+                        observer2 (str):
+                Returns:
+                        
+                &#34;&#34;&#34;
+                pybus = maglev.maglev_MagLevPy.getInstance(&#34;default&#34;)
+                args = [hex, observer1, observer2]
+                ret = None
+                def ConvertHEX_Ret(async_ret):
+                        nonlocal ret
+                        ret = async_ret
+                pybus.call(&#39;ColorConverter.ConvertHEX&#39;, args, ConvertHEX_Ret)
+                return ret
+
+        def ConvertXYZ(self, x: float, y: float, z: float, observer1: str, observer2: str) -&gt; List[Any]:
+                &#34;&#34;&#34;             Convert from XYZ using illumination and observer angles
+                Args:
+                        x (float):
+                        y (float):
+                        z (float):
+                        observer1 (str):
+                        observer2 (str):
+                Returns:
+                        
+                &#34;&#34;&#34;
+                pybus = maglev.maglev_MagLevPy.getInstance(&#34;default&#34;)
+                args = [x, y, z, observer1, observer2]
+                ret = None
+                def ConvertXYZ_Ret(async_ret):
+                        nonlocal ret
+                        ret = async_ret
+                pybus.call(&#39;ColorConverter.ConvertXYZ&#39;, args, ConvertXYZ_Ret)
+                return ret
+
         def AddReferenceColorByRGB(self, system: str, name: str, description: str, r: float, g: float, b: float):
                 &#34;&#34;&#34;             Add a reference color
                 Args:
@@ -563,6 +775,40 @@ class ColorConverter:
                         ret = async_ret
                 pybus.call(&#39;ColorConverter.AddReferenceColorByCMYK&#39;, args, AddReferenceColorByCMYK_Ret)
 
+        def AddReferenceColorByHEX(self, system: str, name: str, description: str, hex: str):
+                &#34;&#34;&#34;             Add a reference color
+                Args:
+                        system (str):
+                        name (str):
+                        description (str):
+                        hex (str):
+                &#34;&#34;&#34;
+                pybus = maglev.maglev_MagLevPy.getInstance(&#34;default&#34;)
+                args = [system, name, description, hex]
+                ret = None
+                def AddReferenceColorByHEX_Ret(async_ret):
+                        nonlocal ret
+                        ret = async_ret
+                pybus.call(&#39;ColorConverter.AddReferenceColorByHEX&#39;, args, AddReferenceColorByHEX_Ret)
+
+        def AddReferenceColorByXYZ(self, system: str, name: str, description: str, x: float, y: float, z: float):
+                &#34;&#34;&#34;             Add a reference color
+                Args:
+                        system (str):
+                        name (str):
+                        description (str):
+                        x (float):
+                        y (float):
+                        z (float):
+                &#34;&#34;&#34;
+                pybus = maglev.maglev_MagLevPy.getInstance(&#34;default&#34;)
+                args = [system, name, description, x, y, z]
+                ret = None
+                def AddReferenceColorByXYZ_Ret(async_ret):
+                        nonlocal ret
+                        ret = async_ret
+                pybus.call(&#39;ColorConverter.AddReferenceColorByXYZ&#39;, args, AddReferenceColorByXYZ_Ret)
+
         def FindReferenceColorByRGB(self, r: float, g: float, b: float) -&gt; List[Any]:
                 &#34;&#34;&#34;             
                 Args:
@@ -616,6 +862,40 @@ class ColorConverter:
                         nonlocal ret
                         ret = async_ret
                 pybus.call(&#39;ColorConverter.FindReferenceColorByCMYK&#39;, args, FindReferenceColorByCMYK_Ret)
+                return ret
+
+        def FindReferenceColorByHEX(self, hex: str) -&gt; List[Any]:
+                &#34;&#34;&#34;             
+                Args:
+                        hex (str):
+                Returns:
+                        
+                &#34;&#34;&#34;
+                pybus = maglev.maglev_MagLevPy.getInstance(&#34;default&#34;)
+                args = [hex]
+                ret = None
+                def FindReferenceColorByHEX_Ret(async_ret):
+                        nonlocal ret
+                        ret = async_ret
+                pybus.call(&#39;ColorConverter.FindReferenceColorByHEX&#39;, args, FindReferenceColorByHEX_Ret)
+                return ret
+
+        def FindReferenceColorByXYZ(self, x: float, y: float, z: float) -&gt; List[Any]:
+                &#34;&#34;&#34;             
+                Args:
+                        x (float):
+                        y (float):
+                        z (float):
+                Returns:
+                        
+                &#34;&#34;&#34;
+                pybus = maglev.maglev_MagLevPy.getInstance(&#34;default&#34;)
+                args = [x, y, z]
+                ret = None
+                def FindReferenceColorByXYZ_Ret(async_ret):
+                        nonlocal ret
+                        ret = async_ret
+                pybus.call(&#39;ColorConverter.FindReferenceColorByXYZ&#39;, args, FindReferenceColorByXYZ_Ret)
                 return ret
 
         def FindReferenceColor(self, system: str, name: str) -&gt; List[Any]:
@@ -792,6 +1072,37 @@ k (float):</p></div>
         pybus.call(&#39;ColorConverter.AddReferenceColorByCMYK&#39;, args, AddReferenceColorByCMYK_Ret)</code></pre>
 </details>
 </dd>
+<dt id="wrappers.ColorConverter.ColorConverter.AddReferenceColorByHEX"><code class="name flex">
+<span>def <span class="ident">AddReferenceColorByHEX</span></span>(<span>self, system: str, name: str, description: str, hex: str)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Add a reference color</p>
+<h2 id="args">Args</h2>
+<p>system (str):
+name (str):
+description (str):
+hex (str):</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def AddReferenceColorByHEX(self, system: str, name: str, description: str, hex: str):
+        &#34;&#34;&#34;             Add a reference color
+        Args:
+                system (str):
+                name (str):
+                description (str):
+                hex (str):
+        &#34;&#34;&#34;
+        pybus = maglev.maglev_MagLevPy.getInstance(&#34;default&#34;)
+        args = [system, name, description, hex]
+        ret = None
+        def AddReferenceColorByHEX_Ret(async_ret):
+                nonlocal ret
+                ret = async_ret
+        pybus.call(&#39;ColorConverter.AddReferenceColorByHEX&#39;, args, AddReferenceColorByHEX_Ret)</code></pre>
+</details>
+</dd>
 <dt id="wrappers.ColorConverter.ColorConverter.AddReferenceColorByRGB"><code class="name flex">
 <span>def <span class="ident">AddReferenceColorByRGB</span></span>(<span>self, system: str, name: str, description: str, r: float, g: float, b: float)</span>
 </code></dt>
@@ -825,6 +1136,41 @@ b (float):</p></div>
                 nonlocal ret
                 ret = async_ret
         pybus.call(&#39;ColorConverter.AddReferenceColorByRGB&#39;, args, AddReferenceColorByRGB_Ret)</code></pre>
+</details>
+</dd>
+<dt id="wrappers.ColorConverter.ColorConverter.AddReferenceColorByXYZ"><code class="name flex">
+<span>def <span class="ident">AddReferenceColorByXYZ</span></span>(<span>self, system: str, name: str, description: str, x: float, y: float, z: float)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Add a reference color</p>
+<h2 id="args">Args</h2>
+<p>system (str):
+name (str):
+description (str):
+x (float):
+y (float):
+z (float):</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def AddReferenceColorByXYZ(self, system: str, name: str, description: str, x: float, y: float, z: float):
+        &#34;&#34;&#34;             Add a reference color
+        Args:
+                system (str):
+                name (str):
+                description (str):
+                x (float):
+                y (float):
+                z (float):
+        &#34;&#34;&#34;
+        pybus = maglev.maglev_MagLevPy.getInstance(&#34;default&#34;)
+        args = [system, name, description, x, y, z]
+        ret = None
+        def AddReferenceColorByXYZ_Ret(async_ret):
+                nonlocal ret
+                ret = async_ret
+        pybus.call(&#39;ColorConverter.AddReferenceColorByXYZ&#39;, args, AddReferenceColorByXYZ_Ret)</code></pre>
 </details>
 </dd>
 <dt id="wrappers.ColorConverter.ColorConverter.ConvertCIELAB"><code class="name flex">
@@ -903,6 +1249,39 @@ Returns:</p></div>
         return ret</code></pre>
 </details>
 </dd>
+<dt id="wrappers.ColorConverter.ColorConverter.ConvertHEX"><code class="name flex">
+<span>def <span class="ident">ConvertHEX</span></span>(<span>self, hex: str, observer1: str, observer2: str) ‑> List[Any]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Convert from HEX using illumination and observer angles</p>
+<h2 id="args">Args</h2>
+<p>hex (str):
+observer1 (str):
+observer2 (str):
+Returns:</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def ConvertHEX(self, hex: str, observer1: str, observer2: str) -&gt; List[Any]:
+        &#34;&#34;&#34;             Convert from HEX using illumination and observer angles
+        Args:
+                hex (str):
+                observer1 (str):
+                observer2 (str):
+        Returns:
+                
+        &#34;&#34;&#34;
+        pybus = maglev.maglev_MagLevPy.getInstance(&#34;default&#34;)
+        args = [hex, observer1, observer2]
+        ret = None
+        def ConvertHEX_Ret(async_ret):
+                nonlocal ret
+                ret = async_ret
+        pybus.call(&#39;ColorConverter.ConvertHEX&#39;, args, ConvertHEX_Ret)
+        return ret</code></pre>
+</details>
+</dd>
 <dt id="wrappers.ColorConverter.ColorConverter.ConvertRGB"><code class="name flex">
 <span>def <span class="ident">ConvertRGB</span></span>(<span>self, r: float, g: float, b: float, observer1: str, observer2: str) ‑> List[Any]</span>
 </code></dt>
@@ -937,6 +1316,43 @@ Returns:</p></div>
                 nonlocal ret
                 ret = async_ret
         pybus.call(&#39;ColorConverter.ConvertRGB&#39;, args, ConvertRGB_Ret)
+        return ret</code></pre>
+</details>
+</dd>
+<dt id="wrappers.ColorConverter.ColorConverter.ConvertXYZ"><code class="name flex">
+<span>def <span class="ident">ConvertXYZ</span></span>(<span>self, x: float, y: float, z: float, observer1: str, observer2: str) ‑> List[Any]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Convert from XYZ using illumination and observer angles</p>
+<h2 id="args">Args</h2>
+<p>x (float):
+y (float):
+z (float):
+observer1 (str):
+observer2 (str):
+Returns:</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def ConvertXYZ(self, x: float, y: float, z: float, observer1: str, observer2: str) -&gt; List[Any]:
+        &#34;&#34;&#34;             Convert from XYZ using illumination and observer angles
+        Args:
+                x (float):
+                y (float):
+                z (float):
+                observer1 (str):
+                observer2 (str):
+        Returns:
+                
+        &#34;&#34;&#34;
+        pybus = maglev.maglev_MagLevPy.getInstance(&#34;default&#34;)
+        args = [x, y, z, observer1, observer2]
+        ret = None
+        def ConvertXYZ_Ret(async_ret):
+                nonlocal ret
+                ret = async_ret
+        pybus.call(&#39;ColorConverter.ConvertXYZ&#39;, args, ConvertXYZ_Ret)
         return ret</code></pre>
 </details>
 </dd>
@@ -1036,6 +1452,34 @@ Returns:</p></div>
         return ret</code></pre>
 </details>
 </dd>
+<dt id="wrappers.ColorConverter.ColorConverter.FindReferenceColorByHEX"><code class="name flex">
+<span>def <span class="ident">FindReferenceColorByHEX</span></span>(<span>self, hex: str) ‑> List[Any]</span>
+</code></dt>
+<dd>
+<div class="desc"><h2 id="args">Args</h2>
+<p>hex (str):
+Returns:</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def FindReferenceColorByHEX(self, hex: str) -&gt; List[Any]:
+        &#34;&#34;&#34;             
+        Args:
+                hex (str):
+        Returns:
+                
+        &#34;&#34;&#34;
+        pybus = maglev.maglev_MagLevPy.getInstance(&#34;default&#34;)
+        args = [hex]
+        ret = None
+        def FindReferenceColorByHEX_Ret(async_ret):
+                nonlocal ret
+                ret = async_ret
+        pybus.call(&#39;ColorConverter.FindReferenceColorByHEX&#39;, args, FindReferenceColorByHEX_Ret)
+        return ret</code></pre>
+</details>
+</dd>
 <dt id="wrappers.ColorConverter.ColorConverter.FindReferenceColorByRGB"><code class="name flex">
 <span>def <span class="ident">FindReferenceColorByRGB</span></span>(<span>self, r: float, g: float, b: float) ‑> List[Any]</span>
 </code></dt>
@@ -1065,6 +1509,38 @@ Returns:</p></div>
                 nonlocal ret
                 ret = async_ret
         pybus.call(&#39;ColorConverter.FindReferenceColorByRGB&#39;, args, FindReferenceColorByRGB_Ret)
+        return ret</code></pre>
+</details>
+</dd>
+<dt id="wrappers.ColorConverter.ColorConverter.FindReferenceColorByXYZ"><code class="name flex">
+<span>def <span class="ident">FindReferenceColorByXYZ</span></span>(<span>self, x: float, y: float, z: float) ‑> List[Any]</span>
+</code></dt>
+<dd>
+<div class="desc"><h2 id="args">Args</h2>
+<p>x (float):
+y (float):
+z (float):
+Returns:</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def FindReferenceColorByXYZ(self, x: float, y: float, z: float) -&gt; List[Any]:
+        &#34;&#34;&#34;             
+        Args:
+                x (float):
+                y (float):
+                z (float):
+        Returns:
+                
+        &#34;&#34;&#34;
+        pybus = maglev.maglev_MagLevPy.getInstance(&#34;default&#34;)
+        args = [x, y, z]
+        ret = None
+        def FindReferenceColorByXYZ_Ret(async_ret):
+                nonlocal ret
+                ret = async_ret
+        pybus.call(&#39;ColorConverter.FindReferenceColorByXYZ&#39;, args, FindReferenceColorByXYZ_Ret)
         return ret</code></pre>
 </details>
 </dd>
@@ -1136,6 +1612,35 @@ Returns:</p></div>
         return ret</code></pre>
 </details>
 </dd>
+<dt id="wrappers.ColorConverter.ColorConverter.FromHEX"><code class="name flex">
+<span>def <span class="ident">FromHEX</span></span>(<span>self, hex: str) ‑> List[Any]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Convert from HEX</p>
+<h2 id="args">Args</h2>
+<p>hex (str):
+Returns:</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def FromHEX(self, hex: str) -&gt; List[Any]:
+        &#34;&#34;&#34;             Convert from HEX
+        Args:
+                hex (str):
+        Returns:
+                
+        &#34;&#34;&#34;
+        pybus = maglev.maglev_MagLevPy.getInstance(&#34;default&#34;)
+        args = [hex]
+        ret = None
+        def FromHEX_Ret(async_ret):
+                nonlocal ret
+                ret = async_ret
+        pybus.call(&#39;ColorConverter.FromHEX&#39;, args, FromHEX_Ret)
+        return ret</code></pre>
+</details>
+</dd>
 <dt id="wrappers.ColorConverter.ColorConverter.FromRGB"><code class="name flex">
 <span>def <span class="ident">FromRGB</span></span>(<span>self, r: float, g: float, b: float) ‑> List[Any]</span>
 </code></dt>
@@ -1166,6 +1671,39 @@ Returns:</p></div>
                 nonlocal ret
                 ret = async_ret
         pybus.call(&#39;ColorConverter.FromRGB&#39;, args, FromRGB_Ret)
+        return ret</code></pre>
+</details>
+</dd>
+<dt id="wrappers.ColorConverter.ColorConverter.FromXYZ"><code class="name flex">
+<span>def <span class="ident">FromXYZ</span></span>(<span>self, x: float, y: float, z: float) ‑> List[Any]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Convert from XYZ</p>
+<h2 id="args">Args</h2>
+<p>x (float):
+y (float):
+z (float):
+Returns:</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def FromXYZ(self, x: float, y: float, z: float) -&gt; List[Any]:
+        &#34;&#34;&#34;             Convert from XYZ
+        Args:
+                x (float):
+                y (float):
+                z (float):
+        Returns:
+                
+        &#34;&#34;&#34;
+        pybus = maglev.maglev_MagLevPy.getInstance(&#34;default&#34;)
+        args = [x, y, z]
+        ret = None
+        def FromXYZ_Ret(async_ret):
+                nonlocal ret
+                ret = async_ret
+        pybus.call(&#39;ColorConverter.FromXYZ&#39;, args, FromXYZ_Ret)
         return ret</code></pre>
 </details>
 </dd>
@@ -1346,17 +1884,25 @@ Returns:</p></div>
 <ul class="">
 <li><code><a title="wrappers.ColorConverter.ColorConverter.AddReferenceColorByCIELAB" href="#wrappers.ColorConverter.ColorConverter.AddReferenceColorByCIELAB">AddReferenceColorByCIELAB</a></code></li>
 <li><code><a title="wrappers.ColorConverter.ColorConverter.AddReferenceColorByCMYK" href="#wrappers.ColorConverter.ColorConverter.AddReferenceColorByCMYK">AddReferenceColorByCMYK</a></code></li>
+<li><code><a title="wrappers.ColorConverter.ColorConverter.AddReferenceColorByHEX" href="#wrappers.ColorConverter.ColorConverter.AddReferenceColorByHEX">AddReferenceColorByHEX</a></code></li>
 <li><code><a title="wrappers.ColorConverter.ColorConverter.AddReferenceColorByRGB" href="#wrappers.ColorConverter.ColorConverter.AddReferenceColorByRGB">AddReferenceColorByRGB</a></code></li>
+<li><code><a title="wrappers.ColorConverter.ColorConverter.AddReferenceColorByXYZ" href="#wrappers.ColorConverter.ColorConverter.AddReferenceColorByXYZ">AddReferenceColorByXYZ</a></code></li>
 <li><code><a title="wrappers.ColorConverter.ColorConverter.ConvertCIELAB" href="#wrappers.ColorConverter.ColorConverter.ConvertCIELAB">ConvertCIELAB</a></code></li>
 <li><code><a title="wrappers.ColorConverter.ColorConverter.ConvertCMYK" href="#wrappers.ColorConverter.ColorConverter.ConvertCMYK">ConvertCMYK</a></code></li>
+<li><code><a title="wrappers.ColorConverter.ColorConverter.ConvertHEX" href="#wrappers.ColorConverter.ColorConverter.ConvertHEX">ConvertHEX</a></code></li>
 <li><code><a title="wrappers.ColorConverter.ColorConverter.ConvertRGB" href="#wrappers.ColorConverter.ColorConverter.ConvertRGB">ConvertRGB</a></code></li>
+<li><code><a title="wrappers.ColorConverter.ColorConverter.ConvertXYZ" href="#wrappers.ColorConverter.ColorConverter.ConvertXYZ">ConvertXYZ</a></code></li>
 <li><code><a title="wrappers.ColorConverter.ColorConverter.FindReferenceColor" href="#wrappers.ColorConverter.ColorConverter.FindReferenceColor">FindReferenceColor</a></code></li>
 <li><code><a title="wrappers.ColorConverter.ColorConverter.FindReferenceColorByCIELAB" href="#wrappers.ColorConverter.ColorConverter.FindReferenceColorByCIELAB">FindReferenceColorByCIELAB</a></code></li>
 <li><code><a title="wrappers.ColorConverter.ColorConverter.FindReferenceColorByCMYK" href="#wrappers.ColorConverter.ColorConverter.FindReferenceColorByCMYK">FindReferenceColorByCMYK</a></code></li>
+<li><code><a title="wrappers.ColorConverter.ColorConverter.FindReferenceColorByHEX" href="#wrappers.ColorConverter.ColorConverter.FindReferenceColorByHEX">FindReferenceColorByHEX</a></code></li>
 <li><code><a title="wrappers.ColorConverter.ColorConverter.FindReferenceColorByRGB" href="#wrappers.ColorConverter.ColorConverter.FindReferenceColorByRGB">FindReferenceColorByRGB</a></code></li>
+<li><code><a title="wrappers.ColorConverter.ColorConverter.FindReferenceColorByXYZ" href="#wrappers.ColorConverter.ColorConverter.FindReferenceColorByXYZ">FindReferenceColorByXYZ</a></code></li>
 <li><code><a title="wrappers.ColorConverter.ColorConverter.FromCIELAB" href="#wrappers.ColorConverter.ColorConverter.FromCIELAB">FromCIELAB</a></code></li>
 <li><code><a title="wrappers.ColorConverter.ColorConverter.FromCMYK" href="#wrappers.ColorConverter.ColorConverter.FromCMYK">FromCMYK</a></code></li>
+<li><code><a title="wrappers.ColorConverter.ColorConverter.FromHEX" href="#wrappers.ColorConverter.ColorConverter.FromHEX">FromHEX</a></code></li>
 <li><code><a title="wrappers.ColorConverter.ColorConverter.FromRGB" href="#wrappers.ColorConverter.ColorConverter.FromRGB">FromRGB</a></code></li>
+<li><code><a title="wrappers.ColorConverter.ColorConverter.FromXYZ" href="#wrappers.ColorConverter.ColorConverter.FromXYZ">FromXYZ</a></code></li>
 <li><code><a title="wrappers.ColorConverter.ColorConverter.GetIlluminationObserverAngles" href="#wrappers.ColorConverter.ColorConverter.GetIlluminationObserverAngles">GetIlluminationObserverAngles</a></code></li>
 <li><code><a title="wrappers.ColorConverter.ColorConverter.GetReferenceColorSystems" href="#wrappers.ColorConverter.ColorConverter.GetReferenceColorSystems">GetReferenceColorSystems</a></code></li>
 <li><code><a title="wrappers.ColorConverter.ColorConverter.GetReferenceColors" href="#wrappers.ColorConverter.ColorConverter.GetReferenceColors">GetReferenceColors</a></code></li>
@@ -1371,7 +1917,7 @@ Returns:</p></div>
 </nav>
 </main>
 <footer id="footer">
-<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.1</a>.</p>
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.2</a>.</p>
 </footer>
 </body>
 </html>
