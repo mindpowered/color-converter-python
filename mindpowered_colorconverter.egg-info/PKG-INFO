@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: mindpowered-colorconverter
-Version: 0.0.4
+Version: 0.0.5
 Summary: Converter to convert between various color systems such as RGB, CIELAB, CMYK, HEX, RGB, and XYZ
 Home-page: https://mindpowered.dev/
 Author: Mind Powered Corporation
@@ -18,6 +18,7 @@ Description:
         
         * [Source Code and Documentation](#source-code-and-documentation)
         * [Licensing](#licensing)
+        * [About](#about)
         * [Requirements](#requirements)
         * [Installation](#installation)
         * [Usage](#usage)
@@ -29,6 +30,19 @@ Description:
         
         # Licensing
         To obtain a version of this package under the MIT License, follow the instructions to [get a license][purchase]. The MIT License has no restrictions on commercial use and permits reuse within proprietary software.
+        
+        # About
+        Defining a color is difficult. The first challenge is finding a way to describe a color. One way is to describe color based on constituent colors. We can describe constituent colors by adding them, like in RGB, or subtracting them, like in CMYK. Gamut is the range of all colors that are representable in a color system. RGB trades a limited gamut for performance. LAB trades performance for the full gamut of visible colors. CMYK represents the gamut used in color printing.
+        
+        The second challenge to defining a color is that it depends on the observer. Viewing the same color will look different when:
+        - printed on paper or displayed on a screen
+        - seen in daylight or under fluorescent lighting
+        - positioned at a close or far distance
+        Standard references such as the Pantone Matching System refer to specific colors. We lose information when converting from a reference color to a color system. Printing or rendering an RGB or CMYK color equivalent to a reference color may not match. We can avoid information loss during conversion by using an unlimited gamut such as LAB. We must also take into account the effect of the observer and illumination.
+        
+        This package aims to provide tools to perform:
+        - Color conversion between color systems
+        - A way of searching for similar standardized reference colors
         
         # Requirements
         - Requires Python 3.x. Due to security fixes and new features Python 3.7 or later is recommended.
