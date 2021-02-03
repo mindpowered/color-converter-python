@@ -4,10 +4,10 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 setuptools.setup(
     name='mindpowered-colorconverter',
-    version='0.0.5',
+    version='0.0.6',
     author="Mind Powered Corporation",
     author_email="support@mindpowered.dev",
-    license="CPAL-1.0",
+    license="MIT",
     url="https://mindpowered.dev/",
     description="Converter to convert between various color systems such as RGB, CIELAB, CMYK, HEX, RGB, and XYZ",
     long_description=long_description,
@@ -18,6 +18,7 @@ setuptools.setup(
     classifiers=[
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",
+        'License :: OSI Approved :: MIT License',
     ],
     install_requires=[
         'mindpowered-maglev',
